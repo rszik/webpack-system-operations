@@ -28,7 +28,9 @@ class MustBeTrue extends webpack_hook_attacher_plugin_1.Operation {
         super.runWrapper(this, () => __awaiter(this, void 0, void 0, function* () {
             let conditionResult = this.params.condition();
             if (!conditionResult) {
-                webpack_hook_attacher_plugin_1.ConsoleLogger.consoleError(`${this.name} - Condition result is false`);
+                let errorMessage = `${this.name} - Condition result is false`;
+                webpack_hook_attacher_plugin_1.ConsoleLogger.consoleError(errorMessage);
+                throw new Error(errorMessage);
             }
         }));
     }
