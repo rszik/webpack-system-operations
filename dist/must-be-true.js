@@ -10,27 +10,27 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const webpack_hook_attacher_plugin_1 = require("webpack-hook-attacher-plugin");
-class CheckConditionParameter extends webpack_hook_attacher_plugin_1.OperationParameter {
+class MustBeTrueParameter extends webpack_hook_attacher_plugin_1.OperationParameter {
     constructor() {
         super(...arguments);
         this.condition = null;
     }
 }
-exports.CheckConditionParameter = CheckConditionParameter;
-class CheckCondition extends webpack_hook_attacher_plugin_1.Operation {
+exports.MustBeTrueParameter = MustBeTrueParameter;
+class MustBeTrue extends webpack_hook_attacher_plugin_1.Operation {
     constructor(userParams) {
         super();
-        this.name = 'CheckCondition';
-        this.params = webpack_hook_attacher_plugin_1.Utils.mergeUserSettingsToDeafultSetting(userParams, new CheckConditionParameter());
+        this.name = 'MustBeTrue';
+        this.params = webpack_hook_attacher_plugin_1.Utils.mergeUserSettingsToDeafultSetting(userParams, new MustBeTrueParameter());
         super.setParams(this.params);
     }
     run() {
         super.runWrapper(this, () => __awaiter(this, void 0, void 0, function* () {
             let conditionResult = this.params.condition();
             if (!conditionResult) {
-                throw Error(`${this.name} - Condition result is false`);
+                webpack_hook_attacher_plugin_1.ConsoleLogger.consoleError(`${this.name} - Condition result is false`);
             }
         }));
     }
 }
-exports.CheckCondition = CheckCondition;
+exports.MustBeTrue = MustBeTrue;
