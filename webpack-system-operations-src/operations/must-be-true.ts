@@ -24,7 +24,9 @@ export class MustBeTrue extends Operation {
         super.runWrapper(this, async () => {
             let conditionResult: boolean = this.params.condition();
             if (!conditionResult) {
-                ConsoleLogger.consoleError(`${this.name} - Condition result is false`);
+                let errorMessage: string = `${this.name} - Condition result is false`;
+                ConsoleLogger.consoleError(errorMessage);
+                throw new Error(errorMessage);
             }
         });
     }
