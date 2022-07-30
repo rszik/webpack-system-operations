@@ -41,6 +41,6 @@
         "typescript": "4.3.5"
     },
     "dependencies": {
-        "webpack-hook-attacher-plugin": "5740.0.2"
+        "@wecdev/webpack-hook-attacher-plugin": "5740.0.3"
     }
 }
