@@ -1,4 +1,4 @@
-import { Utils, Operation, OperationParameter, IOperationParameter } from 'webpack-hook-attacher-plugin';
+import { Utils, Operation, OperationParameter, IOperationParameter } from '@wecdev/webpack-hook-attacher-plugin';
 
 const exec: any = require('child_process').exec;
 const execFile: any = require('child_process').execFile;

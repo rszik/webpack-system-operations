@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Sleep = exports.SleepParameter = void 0;
-const webpack_hook_attacher_plugin_1 = require("webpack-hook-attacher-plugin");
+const webpack_hook_attacher_plugin_1 = require("@wecdev/webpack-hook-attacher-plugin");
 class SleepParameter extends webpack_hook_attacher_plugin_1.OperationParameter {
     constructor() {
         super(...arguments);

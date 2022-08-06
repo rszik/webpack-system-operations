@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RunProcess = exports.RunProcessParameter = exports.Command = exports.ProcessCreationType = void 0;
-const webpack_hook_attacher_plugin_1 = require("webpack-hook-attacher-plugin");
+const webpack_hook_attacher_plugin_1 = require("@wecdev/webpack-hook-attacher-plugin");
 const exec = require('child_process').exec;
 const execFile = require('child_process').execFile;
 const fork = require('child_process').fork;

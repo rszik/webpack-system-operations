@@ -1,4 +1,4 @@
-import { Operation, OperationParameter, IOperationParameter } from 'webpack-hook-attacher-plugin';
+import { Operation, OperationParameter, IOperationParameter } from '@wecdev/webpack-hook-attacher-plugin';
 export declare enum ProcessCreationType {
     exec = "exec",
     execFile = "execFile",

@@ -1,4 +1,4 @@
-import { Utils, Operation, OperationParameter, IOperationParameter, ConsoleLogger } from 'webpack-hook-attacher-plugin';
+import { Utils, Operation, OperationParameter, IOperationParameter, ConsoleLogger } from '@wecdev/webpack-hook-attacher-plugin';
 
 export interface IMustBeTrueParameter extends IOperationParameter {
     condition: Function;

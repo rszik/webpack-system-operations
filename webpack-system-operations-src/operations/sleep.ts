@@ -1,4 +1,4 @@
-import { Utils, Operation, OperationParameter, IOperationParameter } from 'webpack-hook-attacher-plugin';
+import { Utils, Operation, OperationParameter, IOperationParameter } from '@wecdev/webpack-hook-attacher-plugin';
 
 
 export interface ISleepParameter extends IOperationParameter {
