@@ -1,7 +1,7 @@
 {
     "name": "@wecdev/webpack-system-operations",
     "description": "System operation collection for webpack build. You can attach any of these operations (run process, sleep, wait until) to any webpack hook with webpack-hook-attacher-plugin",
-    "version": "5740.0.5",
+    "version": "5740.0.6",
     "author": {
         "name": "Roland Szikora",
         "email": "roland.szikora@wecdev.com",
@@ -41,7 +41,7 @@
         "typescript": "4.3.5"
     },
     "dependencies": {
-        "@wecdev/webpack-hook-attacher-plugin": "5740.0.5",
+        "@wecdev/webpack-hook-attacher-plugin": "5740.0.6",
         "webpack": "5.74.0"
     }
 }

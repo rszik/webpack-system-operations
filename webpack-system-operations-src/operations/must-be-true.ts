@@ -1,3 +1,8 @@
+/*!
+ * Copyright (c) 2022, Roland Szikora.
+ * You can support this package at https://www.patreon.com/rolandszik
+ */
+
 import { Utils, Operation, OperationParameter, IOperationParameter, ConsoleLogger } from '@wecdev/webpack-hook-attacher-plugin';
 
 export interface IMustBeTrueParameter extends IOperationParameter {
