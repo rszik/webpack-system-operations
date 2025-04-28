@@ -31,7 +31,7 @@ var ProcessCreationType;
     ProcessCreationType["execSync"] = "execSync";
     ProcessCreationType["execFileSync"] = "execFileSync";
     ProcessCreationType["spawnSync"] = "spawnSync";
-})(ProcessCreationType = exports.ProcessCreationType || (exports.ProcessCreationType = {}));
+})(ProcessCreationType || (exports.ProcessCreationType = ProcessCreationType = {}));
 class Command {
     constructor() {
         this.processCreationType = ProcessCreationType.exec;
@@ -75,6 +75,7 @@ class RunProcess extends webpack_hook_attacher_plugin_1.Operation {
                 fork(command.execute, command.args, command.options);
                 break;
             case ProcessCreationType.spawn:
+                command.options.shell = true;
                 spawn(command.execute, command.args, command.options);
                 break;
             case ProcessCreationType.execFileSync:

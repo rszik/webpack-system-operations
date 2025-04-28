@@ -76,6 +76,7 @@ export class RunProcess extends Operation {
                 fork(command.execute, command.args, command.options);
                 break;
             case ProcessCreationType.spawn:
+                command.options.shell = true;
                 spawn(command.execute, command.args, command.options);
                 break;
             case ProcessCreationType.execFileSync:
