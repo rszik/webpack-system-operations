@@ -14,7 +14,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RunProcess = exports.RunProcessParameter = exports.Command = exports.ProcessCreationType = void 0;
-const webpack_hook_attacher_plugin_1 = require("@wecdev/webpack-hook-attacher-plugin");
+const webpack_hook_attacher_1 = require("@wecdev/webpack-hook-attacher");
 const exec = require('child_process').exec;
 const execFile = require('child_process').execFile;
 const fork = require('child_process').fork;
@@ -42,18 +42,18 @@ class Command {
     }
 }
 exports.Command = Command;
-class RunProcessParameter extends webpack_hook_attacher_plugin_1.OperationParameter {
+class RunProcessParameter extends webpack_hook_attacher_1.OperationParameter {
     constructor() {
         super(...arguments);
         this.commands = [];
     }
 }
 exports.RunProcessParameter = RunProcessParameter;
-class RunProcess extends webpack_hook_attacher_plugin_1.Operation {
+class RunProcess extends webpack_hook_attacher_1.Operation {
     constructor(userParams) {
         super();
         this.name = 'RunProcess';
-        this.params = webpack_hook_attacher_plugin_1.Utils.mergeUserSettingsToDeafultSetting(userParams, new RunProcessParameter());
+        this.params = webpack_hook_attacher_1.Utils.mergeUserSettingsToDeafultSetting(userParams, new RunProcessParameter());
         super.setParams(this.params);
     }
     run() {

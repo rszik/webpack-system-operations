@@ -14,24 +14,24 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Sleep = exports.SleepParameter = void 0;
-const webpack_hook_attacher_plugin_1 = require("@wecdev/webpack-hook-attacher-plugin");
-class SleepParameter extends webpack_hook_attacher_plugin_1.OperationParameter {
+const webpack_hook_attacher_1 = require("@wecdev/webpack-hook-attacher");
+class SleepParameter extends webpack_hook_attacher_1.OperationParameter {
     constructor() {
         super(...arguments);
         this.miliseconds = 1000;
     }
 }
 exports.SleepParameter = SleepParameter;
-class Sleep extends webpack_hook_attacher_plugin_1.Operation {
+class Sleep extends webpack_hook_attacher_1.Operation {
     constructor(userParams) {
         super();
         this.name = 'Sleep';
-        this.params = webpack_hook_attacher_plugin_1.Utils.mergeUserSettingsToDeafultSetting(userParams, new SleepParameter());
+        this.params = webpack_hook_attacher_1.Utils.mergeUserSettingsToDeafultSetting(userParams, new SleepParameter());
         super.setParams(this.params);
     }
     run() {
         super.runWrapper(this, () => __awaiter(this, void 0, void 0, function* () {
-            webpack_hook_attacher_plugin_1.Utils.Sleep(this.params.miliseconds);
+            webpack_hook_attacher_1.Utils.Sleep(this.params.miliseconds);
         }));
     }
 }

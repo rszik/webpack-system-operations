@@ -14,8 +14,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.WaitUntil = exports.WaitUntilParameter = void 0;
-const webpack_hook_attacher_plugin_1 = require("@wecdev/webpack-hook-attacher-plugin");
-class WaitUntilParameter extends webpack_hook_attacher_plugin_1.OperationParameter {
+const webpack_hook_attacher_1 = require("@wecdev/webpack-hook-attacher");
+class WaitUntilParameter extends webpack_hook_attacher_1.OperationParameter {
     constructor() {
         super(...arguments);
         this.repeatCheckMiliseconds = 1000;
@@ -25,11 +25,11 @@ class WaitUntilParameter extends webpack_hook_attacher_plugin_1.OperationParamet
     }
 }
 exports.WaitUntilParameter = WaitUntilParameter;
-class WaitUntil extends webpack_hook_attacher_plugin_1.Operation {
+class WaitUntil extends webpack_hook_attacher_1.Operation {
     constructor(userParams) {
         super();
         this.name = 'WaitUntil';
-        this.params = webpack_hook_attacher_plugin_1.Utils.mergeUserSettingsToDeafultSetting(userParams, new WaitUntilParameter());
+        this.params = webpack_hook_attacher_1.Utils.mergeUserSettingsToDeafultSetting(userParams, new WaitUntilParameter());
         super.setParams(this.params);
     }
     run() {

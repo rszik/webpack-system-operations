@@ -3,7 +3,7 @@
  * You can support this package at https://www.patreon.com/rolandszik
  */
 
-import { Utils, Operation, OperationParameter, IOperationParameter } from '@wecdev/webpack-hook-attacher-plugin';
+import { Utils, Operation, OperationParameter, IOperationParameter } from '@wecdev/webpack-hook-attacher';
 
 
 export interface IWaitUntilParameter extends IOperationParameter {
